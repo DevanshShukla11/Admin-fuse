@@ -1,5 +1,7 @@
 import * as constants from "../Reducers/constants";
 
+//For Registering user :
+
 export const registerUser = (data , onSuccess , onError) => ({
 
     //Here we are createing a constant and storeing api data to data variable to use it further : 
@@ -13,6 +15,24 @@ export const registerUser = (data , onSuccess , onError) => ({
         postError : onError
     }
 })
+
+
+//For Login user action :
+
+export const loginUser = (data , onSuccess , onError) => ({
+
+    //Here we are createing a constant and storeing api data to data variable to use it further : 
+     type: constants.API,
+     payload: {
+        method  : "POST" ,
+        url : "api/users/register",
+        data,
+        success: (response) => (setUserInfo(response)),
+        postSuccess: onSuccess,
+        postError : onError
+    }
+})
+
 
 //We are getting values of registerUser in the form of data in (data) variable as a props :
 const setUserInfo = (data) => {

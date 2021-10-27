@@ -1,0 +1,23 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.slidebar-main{
+    float: left;
+    background-color: rgb(190, 159, 159);
+}
+.slidebar-data{
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 300px;
+    height: 670px;
+} 
+.slidebar-data a{
+text-decoration: none;
+font-size: 19px;
+}
+.right-container{
+    float: left;
+    width: 1220px;
+    background-color: navy;
+}

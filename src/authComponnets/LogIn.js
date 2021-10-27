@@ -2,11 +2,21 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import LockIcon from '@material-ui/icons/Lock';
 import EmailIcon from '@material-ui/icons/Email';
+import { connect } from 'react-redux';
 import { useState } from 'react';
+import { loginUser } from '../Actions/Auth.actions';
 
-const LogIn = () => {
+const LogIn = ({dispatchloginAction}) => {
     const [email , setEmail] = useState("");
     const [password , setPassword] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatchloginAction( email , password , () => 
+            console.log("account created successfully"),
+            (message) => console.log(`error ${message}`))
+        };
+
     return (
       <>
       <div className="main-comp">
@@ -18,7 +28,7 @@ const LogIn = () => {
            <div className="log-form">
                <div className="logss">
                <form  autoComplete="off"
-                onSubmit="">
+                onSubmit={handleSubmit}>
                 <span className="log">Log in</span>
                
                
@@ -29,7 +39,7 @@ const LogIn = () => {
                  id="email"
                  name="email"
                  value={email}
-                 disabled
+                 onChange={(e)=> setEmail(e.target.value)} 
                  placeholder="Enter your email"/>
                
                 </div>
@@ -38,7 +48,7 @@ const LogIn = () => {
                 <div className="form">
                 <LockIcon className="account"/> 
                 <input type="password"
-                 disabled
+                
                  id="password"
                  value={password} 
                  onChange={(e)=> setPassword(e.target.value)} 
@@ -75,5 +85,9 @@ const LogIn = () => {
       </>
     )
 }
-
-export default LogIn
+const mapDispatchToProps = dispatch => ({
+    dispatchloginAction : (email , password , onSuccess  , onError) => 
+    dispatch(loginUser({ email , password , onSuccess , onError}))
+    
+})
+export default connect(null , mapDispatchToProps)(LogIn)

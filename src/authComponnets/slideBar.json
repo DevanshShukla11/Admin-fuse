@@ -1,0 +1,85 @@
+[
+{
+    "id": 0,
+    "nameDash": "Dashboard",
+    "path": "home/dash",
+    "permissions": {
+        "super-admin": ["c", "r", "u", "d"],
+        "user": ["r"]
+    }
+},
+{
+    "id": 1,
+    "nameAnayltics": "Anayltics",
+    "path": "/home/analytics",
+    "permissions": {
+        "super-admin": ["c", "r", "u", "d"],
+        "user": ["r"]
+    }
+},
+{
+    "id": 2,
+    "namePages": "Pages",
+    "path": "/home/pages",
+    "permissions": {
+        "super-admin": ["c", "r", "u", "d"],
+        "user": ["r"]
+    }
+},
+{
+    "id": 3,
+    "nameUser": "Users",
+    "path": "/home/users",
+    "permissions": {
+        "super-admin": ["c", "r", "u", "d"],
+        "user": ["r"]
+    }
+},
+{
+    "id": 4,
+    "nameEcom": "Ecommerce",
+    "path": "/home/ecommerce",
+    "permissions": {
+        "super-admin": ["c", "r", "u", "d"],
+        "user": ["r"]
+    }
+},
+{
+    "id": 5,
+    "nameAuth": "Authentication",
+    "path": "/home/auth",
+    "permissions": {
+        "super-admin": ["c", "r", "u", "d"],
+        "user": ["r"]
+    }
+},
+{
+    "id": 6,
+    "nameLogin": "Log in",
+    "path": "/home/login",
+    "permissions": {
+        "super-admin": ["c", "r", "u", "d"],
+        "user": ["r"]
+    }
+},
+{
+    "id": 7,
+    "nameSignup": "Sign in",
+    "path": "/home/signup",
+    "permissions": {
+        "super-admin": ["c", "r", "u", "d"],
+        "user": ["r"]
+    }
+},
+{
+    "id": 7,
+    "nameLogout": "Log out",
+    "path": "/home/signup",
+    "permissions": {
+        "super-admin": ["c", "r", "u", "d"],
+        "user": ["r"]
+    }
+}
+
+
+]
